@@ -98,12 +98,30 @@
         </section>
 
         <section id="shap">
-            <h2>3. SHAP: SHapley Additive exPlanations</h2>
+            <h2>3. SHAP: Shapley Additive Explanations</h2>
 
             <h3>3.1 Conceptual Overview</h3>
             <p>
-                <!-- SHAP overview text -->
+                SHAP is grounded in cooperative game theory, in which individual players contribute value to a collective outcome. In the context of machine learning, the “players” are the input features, and the “payout” is the prediction.
             </p>
+
+            <p>
+The central goal of SHAP is to compute a fair allocation of contribution from each feature. This fairness is defined mathematically through Shapley values, ensuring the explanation satisfies:
+            </p>
+
+            
+    <ul>
+        <li><strong>Efficiency:</strong> all feature contributions sum exactly to the difference between the prediction and a baseline value.</li>
+        <li><strong>Symmetry:</strong> if two features contribute equally, their SHAP values are identical.</li>
+        <li><strong>Monotonicity:</strong> if a model increases reliance on a feature, its contribution cannot decrease.</li>
+        <li><strong>Additivity:</strong> SHAP explanations combine naturally over different models.</li>
+    </ul>
+
+    <p>
+        This theoretical foundation provides SHAP with unusually strong guarantees compared with other 
+        interpretability techniques.
+    </p>
+</section>
 
             <h3>3.2 Intuition Behind SHAP Values</h3>
             <p>
