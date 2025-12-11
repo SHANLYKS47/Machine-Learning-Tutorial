@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opening the Black Box: SHAP and LIME Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Basic readable styling -->
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        h1, h2, h3 {
+            line-height: 1.3;
+        }
+        code {
+            font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;
+            background: #f4f4f4;
+            padding: 0.1rem 0.25rem;
+            border-radius: 3px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 0.75rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            display: block;
+        }
+        figure {
+            margin: 1.5rem 0;
+        }
+        figcaption {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        a {
+            color: #0055aa;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Opening the Black Box: A Practical Introduction to SHAP and LIME</h1>
+        <p><strong>Author:</strong> Your Name<br>
+           <strong>Course:</strong> Course Name / Module Code<br>
+           <strong>Assignment:</strong> Explainability Tutorial</p>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>
+                <!-- Paste your introduction text here -->
+            </p>
+        </section>
+
+        <section id="why-explainability">
+            <h2>2. Why Explainability Matters in Machine Learning</h2>
+            <p>
+                <!-- Paste your explainability motivation text here -->
+            </p>
+        </section>
+
+        <section id="shap">
+            <h2>3. SHAP: SHapley Additive exPlanations</h2>
+
+            <h3>3.1 Conceptual Overview</h3>
+            <p>
+                <!-- SHAP overview text -->
+            </p>
+
+            <h3>3.2 Intuition Behind SHAP Values</h3>
+            <p>
+                <!-- SHAP intuition text -->
+            </p>
+
+            <h3>3.3 SHAP Visualizations</h3>
+
+            <figure>
+                <img src="../figures/shap_summary.png" alt="SHAP summary plot showing global feature importance and effect directions.">
+                <figcaption>Figure 1: SHAP summary plot illustrating global feature importance and the distribution of feature effects.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="../figures/shap_force.png" alt="SHAP force plot showing contributions of features pushing the prediction above or below the baseline.">
+                <figcaption>Figure 2: SHAP force plot decomposing a single prediction into positive and negative feature contributions.</figcaption>
+            </figure>
+
+            <p>
+                <!-- Interpretation of these plots -->
+            </p>
+        </section>
+
+        <section id="lime">
+            <h2>4. LIME: Local Interpretable Model-Agnostic Explanations</h2>
+
+            <h3>4.1 Conceptual Overview</h3>
+            <p>
+                <!-- LIME overview text -->
+            </p>
+
+            <h3>4.2 How LIME Works</h3>
+            <p>
+                <!-- Steps of LIME -->
+            </p>
+
+            <figure>
+                <img src="../figures/lime_explanation.png" alt="LIME explanation bar chart showing local feature contributions for one instance.">
+                <figcaption>Figure 3: LIME explanation for a single instance, using a simple local surrogate model.</figcaption>
+            </figure>
+
+            <h3>4.3 Strengths and Limitations</h3>
+            <p>
+                <!-- Pros/cons of LIME -->
+            </p>
+        </section>
+
+        <section id="comparison">
+            <h2>5. SHAP vs LIME: Comparison and Choosing the Right Tool</h2>
+            <p>
+                <!-- Comparison text -->
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>SHAP</th>
+                        <th>LIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Theory</td>
+                        <td>Shapley value-based, game-theoretic</td>
+                        <td>Local surrogate model approximation</td>
+                    </tr>
+                    <tr>
+                        <td>Stability</td>
+                        <td>High</td>
+                        <td>Lower</td>
+                    </tr>
+                    <tr>
+                        <td>Runtime</td>
+                        <td>Slower</td>
+                        <td>Faster</td>
+                    </tr>
+                    <!-- Add more rows if needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="demonstration">
+            <h2>6. Demonstration: Code, Outputs and Interpretation</h2>
+            <p>
+                <!-- Describe model, dataset, and what the code does. Do not paste huge code blocks here; just high-level explanation. -->
+            </p>
+
+            <pre><code>
+# Example (high-level) – full code is in the Jupyter notebook
+model = RandomForestRegressor(...)
+model.fit(X_train, y_train)
+
+explainer = shap.TreeExplainer(model)
+shap_values = explainer.shap_values(X_test)
+            </code></pre>
+
+            <p>
+                For full, runnable code including data loading and figure generation,
+                please see the accompanying Jupyter notebook in the GitHub repository.
+            </p>
+        </section>
+
+        <section id="application">
+            <h2>7. Practical Application Example</h2>
+            <p>
+                <!-- Your practical application narrative -->
+            </p>
+        </section>
+
+        <section id="best-practices">
+            <h2>8. Best Practices and Common Pitfalls</h2>
+            <p>
+                <!-- Best practices and pitfalls -->
+            </p>
+        </section>
+
+        <section id="conclusion">
+            <h2>9. Conclusion</h2>
+            <p>
+                <!-- Conclusion text -->
+            </p>
+        </section>
+
+        <section id="references">
+            <h2>10. References</h2>
+            <ol>
+                <li>Lundberg, S. M., &amp; Lee, S.-I. (2017). A Unified Approach to Interpreting Model Predictions.</li>
+                <li>Ribeiro, M. T., Singh, S., &amp; Guestrin, C. (2016). Why Should I Trust You? Explaining the Predictions of Any Classifier.</li>
+                <li><a href="https://shap.readthedocs.io" target="_blank" rel="noopener">SHAP Documentation</a></li>
+                <li><a href="https://github.com/marcotcr/lime" target="_blank" rel="noopener">LIME Documentation</a></li>
+                <!-- Add any blogs/papers you used -->
+            </ol>
+        </section>
+
+    </main>
+
+</body>
+</html>
 
