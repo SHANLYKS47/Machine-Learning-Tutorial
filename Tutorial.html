@@ -75,15 +75,25 @@
             <p>
                 Explainability plays a critical role in the development and evaluation of machine learning systems. Without it, practitioners may struggle to understand model errors, unintended biases, or unusual behaviour. Stakeholders may be reluctant to deploy models they do not trust or cannot interrogate.
             <p>
-Explainability is often separated into:
+                
+            <p>Explainability is often separated into:</p>
+            <ul>
+                <li>
+                    <strong>Global interpretability:</strong>
+                    understanding the model as a whole (overall feature importance, learned relationships).
+                </li>
+                <li>
+                    <strong>Local interpretability:</strong>
+                    understanding why the model made a specific prediction for a specific input.
+                </li>
+            </ul>
+
             <p>
-- Global interpretability: understanding the model as a whole (overall feature importance, learned relationships).
+               SHAP and LIME focus on local interpretability, which is particularly useful when diagnosing a problematic sample, auditing fairness, or communicating model behaviour to non-technical audiences.
+            </p>
+
             <p>
-- Local interpretability: understanding why the model made a specific prediction for a specific input.
-            <p>
-SHAP and LIME focus on local interpretability, which is particularly useful when diagnosing a problematic sample, auditing fairness, or communicating model behaviour to non-technical audiences.
-            <p>
-Local explanations highlight how much each input feature contributed to an individual result, either positively (pushing prediction upward) or negatively (pushing prediction downward). These explanations often illuminate how the model responds to nuanced interactions within the data.
+               Local explanations highlight how much each input feature contributed to an individual result, either positively (pushing prediction upward) or negatively (pushing prediction downward). These explanations often illuminate how the model responds to nuanced interactions within the data.
             </p>
         </section>
 
